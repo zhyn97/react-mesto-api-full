@@ -1,0 +1,15 @@
+.entrance-page__button {
+  background: #ffffff;
+  border-radius: 2px;
+  width: 358px;
+  height: 50px;
+  border: 0px;
+  margin-top: 180px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .entrance-page__button{
+    width: 260px
+  }
+}

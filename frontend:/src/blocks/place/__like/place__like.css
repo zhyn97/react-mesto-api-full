@@ -1,0 +1,12 @@
+.place__like {
+    width: 22px;
+    height: 19px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../../images/like.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 22px;
+    margin-right: 2px;
+    cursor: pointer;
+}

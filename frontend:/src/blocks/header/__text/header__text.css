@@ -1,0 +1,18 @@
+.header__text {
+  margin: 45px 0 41px;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+  
+  @media screen and (max-width: 767px) {
+    .header__text {
+      margin: 28px 0 27px;
+    }
+  }

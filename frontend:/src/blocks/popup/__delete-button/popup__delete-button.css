@@ -1,0 +1,19 @@
+.popup__delete-button{
+    min-width: 358px;
+    min-height: 50px;
+    margin: 0px 36px 36px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: .3s ease;
+    padding: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__delete-button{
+      min-width: 238px;
+      margin: 0px 46px 36px;
+    }
+}

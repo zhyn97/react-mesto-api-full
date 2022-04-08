@@ -1,0 +1,79 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+@import url(./blocks/body/body.css);
+@import url(./blocks/root/root.css);
+@import url(./blocks/mobile-menu/mobile-menu.css);
+@import url(./blocks/mobile-menu/_active/mobile-menu_active.css);
+@import url(./blocks/mobile-menu/__text/mobile-menu__text.css);
+@import url(./blocks/mobile-menu/__link/mobile-menu__link.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__text/header__text.css);
+@import url(./blocks/header/__navigation/header__navigation.css);
+@import url(./blocks/header/__icon-menu/header__icon-menu.css);
+@import url(./blocks/header/__icon-menu/_close/header__icon-menu_close.css);
+@import url(./blocks/logo/logo.css);
+@import url(./blocks/opacity-button/opacity-button.css);
+
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__edit-view/profile__edit-view.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__add-button/profile__add-button.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__occupation/profile__occupation.css);
+@import url(./blocks/profile/__edit-button/profile__edit-button.css);
+
+@import url(./blocks/places/places.css);
+@import url(./blocks/place/place.css);
+@import url(./blocks/place/__image/place__image.css);
+@import url(./blocks/place/__trash/_active/place__trash_active.css);
+@import url(./blocks/place/__trash/_hidden/place__trash_hidden.css);
+@import url(./blocks/place/__title/place__title.css);
+@import url(./blocks/place/__like/place__like.css);
+@import url(./blocks/place/__like/_active/place__like_active.css);
+@import url(./blocks/place/__name-area/place__name-area.css);
+@import url(./blocks/place/__number-likes/place__number-likes.css);
+
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/__close/popup__close.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__form/popup__form.css);
+@import url(./blocks/popup/__change-line/popup__change-line.css);
+@import url(./blocks/popup/__save-button/popup__save-button.css);
+@import url(./blocks/popup/__title/popup__title.css);
+@import url(./blocks/popup/_big-img/popup_big-img.css);
+@import url(./blocks/popup/__big-img-title/popup__big-img-title.css);
+@import url(./blocks/popup/__big-img/popup__big-img.css);
+@import url(./blocks/popup/__big-img-container/popup__big-img-container.css);
+@import url(./blocks/popup/__delete-card-container/popup__delete-card-container.css);
+@import url(./blocks/popup/__delete-title/popup__delete-title.css);
+@import url(./blocks/popup/__delete-button/popup__delete-button.css);
+/**активация popup**/
+@import url(./blocks/popup/_active/popup_active.css);
+@import url(./blocks/popup/_opacity/popup_opacity.css);
+
+/*Ошибки валидации*/
+@import url(./blocks/popup/__change-line/_state/popup__change-line_state_invalid.css);
+@import url(./blocks/error/error.css);
+@import url(./blocks/popup/__save-button/_state_disabled/popup__save-button_state_disabled.css);
+
+/* Страница Входа */
+@import url(./blocks/entrance-page/entrance-page.css);
+@import url(./blocks/entrance-page/__title/entrance-page__title.css);
+@import url(./blocks/entrance-page/__text/entrance-page__text.css);
+@import url(./blocks/entrance-page/__form/entrance-page__form.css);
+@import url(./blocks/entrance-page/__change-line/entrance-page__change-line.css);
+@import url(./blocks/entrance-page/__button/entrance-page__button.css);
+
+/* infoTooltip */
+@import url(./blocks/info-tooltip/__img/info-tooltip__img.css);
+@import url(./blocks/info-tooltip/__text/info-tooltip__text.css);
+
+/* not-found */
+@import url(./blocks/not-found/not-found.css);
+@import url(./blocks/not-found/__title/not-found__title.css);
+@import url(./blocks/not-found/__text/not-found__text.css);

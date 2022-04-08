@@ -1,0 +1,16 @@
+.error{
+    display: block;
+    margin-left: 8%;
+    margin-top: -28px;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    min-height: 10px;
+}
+
+.error:last-of-type{
+    margin-top: -4px;
+}

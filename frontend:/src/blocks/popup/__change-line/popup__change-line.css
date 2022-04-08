@@ -1,0 +1,23 @@
+.popup__change-line{
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto 30px;
+  min-width: 358px;
+  padding-bottom: 13px;
+  font-size: 14px;
+  line-height: 117%;
+}
+
+.popup__change-line:last-of-type{
+  margin: 0 auto 6px;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__change-line{
+      min-width: 238px;
+    }
+    .popup__change-line:last-of-type{
+      margin: 0 auto 5px;
+    }
+}
