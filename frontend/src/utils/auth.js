@@ -1,4 +1,4 @@
-export const BASE_URL = process.env.REACT_APP_BASE_URL || "https://auth.nomoreparties.co";
+export const BASE_URL = 'http://api.nzhyburtovich.nomoredomains.work';
 
 const getJson = (response) => {
   if (response.ok) {
