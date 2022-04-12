@@ -38,7 +38,7 @@ export const checkToken = (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "Authorization" : `Bearer ${token}`
+      "Authorization" : `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjU1Y2VjOWYxYmJjYmYyZmYyZWNlZDYiLCJpYXQiOjE2NDk3OTE4NTl9.9okszY3b_pEEwWyc-IkOHJr0NufejOsh47pR3lUuPeM`
     },
   }).then(getJson);
 };
