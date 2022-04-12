@@ -2,7 +2,7 @@
 /* eslint-disable object-shorthand */
 /* eslint-disable func-names */
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const validator = require('validator');
 const BadAuthError = require('../errors/bad-auth');
 
