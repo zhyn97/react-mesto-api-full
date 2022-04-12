@@ -9,6 +9,7 @@ const auth = require('./middlewares/auth');
 const { createUser, login } = require('./controllers/users');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const cors = require('cors')
 
 const regExp = /^((ftp|http|https):\/\/)?(www\.)?([A-Za-z0-9]{1}[A-Za-z0-9\-]*\.?)*\.{1}[A-Za-z0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\/])*)?/;
 
@@ -22,6 +23,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
+
+
+app.use(cors({
+  origin: 'https://nzhyburtovich.nomoredomains.work',
+  credentials: true,
+}))
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
