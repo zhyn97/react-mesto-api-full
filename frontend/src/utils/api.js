@@ -116,8 +116,8 @@ class Api {
 }
 
 const api = new Api({
-  address: "https://api.nzhyburtovich.nomoredomains.work/",
-  token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjU1Y2VjOWYxYmJjYmYyZmYyZWNlZDYiLCJpYXQiOjE2NDk3OTE4NTl9.9okszY3b_pEEwWyc-IkOHJr0NufejOsh47pR3lUuPeM`,
+  address: "https://mesto.nomoreparties.co/v1/cohort-32",
+  token: "375f8480-1170-4121-a89c-9ffd6ccda63c",
 });
 
 export default api;
