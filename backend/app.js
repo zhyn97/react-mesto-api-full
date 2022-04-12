@@ -26,7 +26,7 @@ app.use(requestLogger);
 
 
 app.use(cors({
-  origin: 'https://nzhyburtovich.nomoredomains.work',
+  origin: 'http://nzhyburtovich.nomoredomains.work',
   credentials: true,
 }))
 
