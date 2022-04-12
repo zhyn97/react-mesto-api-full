@@ -74,10 +74,7 @@ const login = (req, res, next) => {
       if (!user) {
         throw new BadAuthError('Ошибка авторизации');
       }
-      const token = jwt.sign(
-        { _id: user._id },
-        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret'
-      ); 
+      const token = jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
 
       res.send({ token });
     })
