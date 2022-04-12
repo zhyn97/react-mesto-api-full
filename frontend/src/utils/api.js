@@ -117,7 +117,7 @@ class Api {
 
 const api = new Api({
   address: "https://mesto.nomoreparties.co/v1/cohort-32",
-  token: "375f8480-1170-4121-a89c-9ffd6ccda63c",
+  token: `Bearer ${localStorage.getItem('token')}`,
 });
 
 export default api;
