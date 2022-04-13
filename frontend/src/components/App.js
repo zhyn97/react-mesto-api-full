@@ -203,10 +203,10 @@ function App() {
 
   React.useEffect(() => {
     if (localStorage.getItem("token")) {
-      const token = localStorage.token;
+      const token = localStorage.getItem("token");
       checkToken(token).then((res) => {
         if (res) {
-          console.log(res);
+          setEmail(res.email);
           setLoggedIn(true);
           history.push("/");
           console.dir(res);
