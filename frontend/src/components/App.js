@@ -94,7 +94,7 @@ function App() {
     api
       .addNewCard(name, link)
       .then((res) => {
-        setCards([ ...cards, res]);
+        setCards([res, ...cards]);
         closeAllPopups();
       })
       .catch((err) => console.log(err));
@@ -223,9 +223,6 @@ function App() {
   }, [loggedIn]);
 
   React.useEffect(() => {
-    if(!loggedIn){
-      return
-    }
     api
       .getUserData()
       .then((res) => {
