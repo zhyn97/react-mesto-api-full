@@ -223,6 +223,9 @@ function App() {
   }, [loggedIn]);
 
   React.useEffect(() => {
+    if(!loggedIn){
+      return
+    }
     api
       .getUserData()
       .then((res) => {
