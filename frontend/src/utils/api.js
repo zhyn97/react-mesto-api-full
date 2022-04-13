@@ -18,7 +18,7 @@ class Api {
   getUserData() {
     return fetch(`${this.address}/users/me`, {
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResponse);
   }
@@ -26,7 +26,7 @@ class Api {
   getCards() {
     return fetch(`${this.address}/cards`, {
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResponse);
   }
