@@ -215,10 +215,16 @@ function App() {
   }, []);
 
   React.useEffect(() => {
+    if(!loggedIn){
+      return
+    }
     getCards();
   }, [loggedIn]);
 
   React.useEffect(() => {
+    if(!loggedIn){
+      return
+    }
     api
       .getUserData()
       .then((res) => {
