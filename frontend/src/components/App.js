@@ -157,6 +157,7 @@ function App() {
       .then((data) => {
         localStorage.setItem("token", data.token);
         setLoggedIn(true);
+        setEmail(`${userData.email}`);
         history.push("/");
       })
       .catch((err) => console.log(err));
