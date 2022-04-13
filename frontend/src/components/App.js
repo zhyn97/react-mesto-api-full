@@ -219,7 +219,6 @@ function App() {
       return
     }
     getCards();
-    console.log(currentUser);
   }, [loggedIn]);
 
   React.useEffect(() => {
@@ -231,6 +230,7 @@ function App() {
       .then((res) => {
         console.dir(res);
         setCurrentUser(res);
+        console.log(currentUser);
       })
       .catch((err) => {console.log(err)});
       console.log("userData");
