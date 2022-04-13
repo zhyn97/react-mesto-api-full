@@ -199,7 +199,7 @@ function App() {
         }
       });
     }
-  }, []);
+  }, [history]);
 
   React.useEffect(() => {
     getCards();
