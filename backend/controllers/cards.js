@@ -25,7 +25,7 @@ const createCard = (req, res, next) => {
 };
 
 const getCard = (req, res, next) => {
-  Card.find({})
+  Card.find({}).sort({ _id: -1 })
     .then((card) => {
       if (!card) {
         throw new NotFoundError('Ошибка запроса');
