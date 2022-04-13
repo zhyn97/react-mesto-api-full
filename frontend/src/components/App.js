@@ -166,6 +166,7 @@ function App() {
     localStorage.removeItem("token");
     setIsMobileMenu(false);
     setCurrentUser({});
+    setCards([]);
   }
 
   function handleResize() {
@@ -235,15 +236,6 @@ function App() {
       })
       .catch((err) => {console.log(err)});
   }, [loggedIn]);
-
-  React.useEffect(() => {
-    api
-      .getUserData()
-      .then((res) => {
-        setCurrentUser(res);
-      })
-      .catch((err) => {console.log(err)});
-  }, [loggedIn])
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
