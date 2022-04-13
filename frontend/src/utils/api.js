@@ -35,7 +35,7 @@ class Api {
     return fetch(`${this.address}/users/me`, {
       method: "PATCH",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -49,7 +49,7 @@ class Api {
     return fetch(`${this.address}/cards`, {
       method: "POST",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -63,7 +63,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}`, {
       method: "DELETE",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResponse);
   }
@@ -72,7 +72,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}/likes`, {
       method: "PUT",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResponse);
   }
@@ -82,14 +82,14 @@ class Api {
       return fetch(`${this.address}/cards/${cardId}/likes`, {
         method: "DELETE",
         headers: {
-          authorization: `${this._getToken}`,
+          authorization: `Bearer ${localStorage.getItem('token')}`,
         },
       }).then(this._checkResponse);
     } else {
       return fetch(`${this.address}/cards/${cardId}/likes`, {
         method: "PUT",
         headers: {
-          authorization: `${this._getToken}`,
+          authorization: `Bearer ${localStorage.getItem('token')}`,
         },
       }).then(this._checkResponse);
     }
@@ -99,7 +99,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}/likes`, {
       method: "DELETE",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     }).then(this._checkResponse);
   }
@@ -108,7 +108,7 @@ class Api {
     return fetch(`${this.address}/users/me/avatar`, {
       method: "PATCH",
       headers: {
-        authorization: `${this._getToken}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
