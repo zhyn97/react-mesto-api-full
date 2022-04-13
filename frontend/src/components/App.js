@@ -165,6 +165,7 @@ function App() {
   function signOut() {
     localStorage.removeItem("token");
     setIsMobileMenu(false);
+    setCurrentUser({});
   }
 
   function handleResize() {
