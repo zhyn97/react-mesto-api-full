@@ -168,6 +168,7 @@ function App() {
     setCurrentUser({});
     setCards([]);
     setLoggedIn(false);
+    setEmail("");
   }
 
   function handleResize() {
