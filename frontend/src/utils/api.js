@@ -1,7 +1,6 @@
 class Api {
-  constructor({ address, token }) {
+  constructor({ address }) {
     this.address = address;
-    this.token = token;
   }
 
   _checkResponse(res) {
@@ -12,10 +11,14 @@ class Api {
     }
   }
 
+  _getToken=()=>{
+    return localStorage.getItem("token");
+  }
+
   getUserData() {
     return fetch(`${this.address}/users/me`, {
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
       },
     }).then(this._checkResponse);
   }
@@ -23,7 +26,7 @@ class Api {
   getCards() {
     return fetch(`${this.address}/cards`, {
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
       },
     }).then(this._checkResponse);
   }
@@ -32,7 +35,7 @@ class Api {
     return fetch(`${this.address}/users/me`, {
       method: "PATCH",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -46,7 +49,7 @@ class Api {
     return fetch(`${this.address}/cards`, {
       method: "POST",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -60,7 +63,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}`, {
       method: "DELETE",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
       },
     }).then(this._checkResponse);
   }
@@ -69,7 +72,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}/likes`, {
       method: "PUT",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
       },
     }).then(this._checkResponse);
   }
@@ -79,14 +82,14 @@ class Api {
       return fetch(`${this.address}/cards/${cardId}/likes`, {
         method: "DELETE",
         headers: {
-          authorization: this.token,
+          authorization: `${this._getToken}`,
         },
       }).then(this._checkResponse);
     } else {
       return fetch(`${this.address}/cards/${cardId}/likes`, {
         method: "PUT",
         headers: {
-          authorization: this.token,
+          authorization: `${this._getToken}`,
         },
       }).then(this._checkResponse);
     }
@@ -96,7 +99,7 @@ class Api {
     return fetch(`${this.address}/cards/${id}/likes`, {
       method: "DELETE",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
       },
     }).then(this._checkResponse);
   }
@@ -105,7 +108,7 @@ class Api {
     return fetch(`${this.address}/users/me/avatar`, {
       method: "PATCH",
       headers: {
-        authorization: this.token,
+        authorization: `${this._getToken}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -115,13 +118,8 @@ class Api {
   }
 }
 
-const getToken=()=>{
-  return localStorage.getItem("token");
-}
-
 const api = new Api({
   address: "https://api.nzhyburtovich.nomoredomains.work",
-  token: `Bearer ${getToken()}`,
 });
 
 export default api;
