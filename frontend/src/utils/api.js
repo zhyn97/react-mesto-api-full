@@ -113,11 +113,15 @@ class Api {
       }),
     }).then(this._checkResponse);
   }
+
+  getToken() {
+    return localStorage.getItem("token");
+  }
 }
 
 const api = new Api({
-  address: "https://mesto.nomoreparties.co/v1/cohort-32",
-  token: "375f8480-1170-4121-a89c-9ffd6ccda63c",
+  address: "https://api.nzhyburtovich.nomoredomains.work",
+  token: `Bearer ${this.getToken()}`,
 });
 
 export default api;

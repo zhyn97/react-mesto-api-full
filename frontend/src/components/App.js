@@ -209,7 +209,6 @@ function App() {
           setEmail(res.email);
           setLoggedIn(true);
           history.push("/");
-          console.dir(res);
         }
       });
     }
