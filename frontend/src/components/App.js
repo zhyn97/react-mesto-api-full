@@ -195,6 +195,7 @@ function App() {
           setEmail(res.data.email);
           setLoggedIn(true);
           history.push("/");
+          console.dir(res);
         }
       });
     }
