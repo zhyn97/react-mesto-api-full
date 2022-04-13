@@ -219,6 +219,7 @@ function App() {
       return
     }
     getCards();
+    console.log(currentUser);
   }, [loggedIn]);
 
   React.useEffect(() => {
