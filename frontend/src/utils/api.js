@@ -121,7 +121,7 @@ const getToken=()=>{
 
 const api = new Api({
   address: "https://api.nzhyburtovich.nomoredomains.work",
-  token: `Bearer ${getToken}`,
+  token: `Bearer ${getToken()}`,
 });
 
 export default api;
