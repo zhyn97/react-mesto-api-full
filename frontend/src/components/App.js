@@ -120,7 +120,6 @@ function App() {
         );
       })
       .catch((err) => console.log(err));
-      console.log('like');
   }
 
   function handleCardDelete(card) {
