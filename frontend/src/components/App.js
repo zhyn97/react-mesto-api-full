@@ -167,6 +167,7 @@ function App() {
     setIsMobileMenu(false);
     setCurrentUser({});
     setCards([]);
+    setLoggedIn(false);
   }
 
   function handleResize() {
