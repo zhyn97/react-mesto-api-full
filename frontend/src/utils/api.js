@@ -121,7 +121,7 @@ class Api {
 
 const api = new Api({
   address: "https://api.nzhyburtovich.nomoredomains.work",
-  token: `Bearer ${this.getToken()}`,
+  token: `Bearer ${this.getToken}`,
 });
 
 export default api;
