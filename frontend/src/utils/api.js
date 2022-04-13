@@ -113,15 +113,15 @@ class Api {
       }),
     }).then(this._checkResponse);
   }
+}
 
-  getToken() {
-    return localStorage.getItem("token");
-  }
+const getToken=()=>{
+  return localStorage.getItem("token");
 }
 
 const api = new Api({
   address: "https://api.nzhyburtovich.nomoredomains.work",
-  token: `Bearer ${this.getToken}`,
+  token: `Bearer ${getToken}`,
 });
 
 export default api;
