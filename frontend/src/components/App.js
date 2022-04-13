@@ -236,6 +236,15 @@ function App() {
       .catch((err) => {console.log(err)});
   }, [loggedIn]);
 
+  React.useEffect(() => {
+    api
+      .getUserData()
+      .then((res) => {
+        setCurrentUser(res);
+      })
+      .catch((err) => {console.log(err)});
+  }, [loggedIn])
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="root">
