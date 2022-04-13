@@ -120,6 +120,7 @@ function App() {
         );
       })
       .catch((err) => console.log(err));
+      console.log('like');
   }
 
   function handleCardDelete(card) {
@@ -230,10 +231,8 @@ function App() {
       .then((res) => {
         console.dir(res);
         setCurrentUser(res);
-        console.log(currentUser);
       })
       .catch((err) => {console.log(err)});
-      console.log("userData");
   }, [loggedIn]);
 
   return (
