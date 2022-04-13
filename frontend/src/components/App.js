@@ -193,20 +193,6 @@ function App() {
     return () => document.removeEventListener("keydown", closeByEscape);
   }, []);
 
-  // React.useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     const token = localStorage.getItem("token");
-  //     checkToken(token).then((res) => {
-  //       if (res) {
-  //         setEmail(res.data.email);
-  //         setLoggedIn(true);
-  //         history.push("/");
-  //         console.dir(res);
-  //       }
-  //     });
-  //   }
-  // }, []);
-
   React.useEffect(() => {
     if (localStorage.getItem("token")) {
       const token = localStorage.getItem("token");
@@ -234,7 +220,6 @@ function App() {
     api
       .getUserData()
       .then((res) => {
-        console.dir(res);
         setCurrentUser(res);
       })
       .catch((err) => {console.log(err)});
