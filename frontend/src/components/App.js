@@ -216,16 +216,18 @@ function App() {
 
   React.useEffect(() => {
     getCards();
-  }, []);
+  }, [loggedIn]);
 
   React.useEffect(() => {
     api
       .getUserData()
       .then((res) => {
+        console.dir(res);
         setCurrentUser(res);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => {console.log(err)});
+      console.log("userData");
+  }, [loggedIn]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
