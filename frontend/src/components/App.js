@@ -10,7 +10,7 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import ProtectedRoute from "./ProtectedRoute";
@@ -187,19 +187,33 @@ function App() {
     return () => document.removeEventListener("keydown", closeByEscape);
   }, []);
 
+  // React.useEffect(() => {
+  //   if (localStorage.getItem("token")) {
+  //     const token = localStorage.getItem("token");
+  //     checkToken(token).then((res) => {
+  //       if (res) {
+  //         setEmail(res.data.email);
+  //         setLoggedIn(true);
+  //         history.push("/");
+  //         console.dir(res);
+  //       }
+  //     });
+  //   }
+  // }, []);
+
   React.useEffect(() => {
     if (localStorage.getItem("token")) {
-      const token = localStorage.getItem("token");
+      const token = localStorage.token;
       checkToken(token).then((res) => {
         if (res) {
-          setEmail(res.data.email);
+          console.log(res);
           setLoggedIn(true);
           history.push("/");
           console.dir(res);
         }
       });
     }
-  }, [history]);
+  }, []);
 
   React.useEffect(() => {
     getCards();
