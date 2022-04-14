@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const { celebrate, Joi, errors } = require('celebrate');
 const cors = require('cors');
+const helmet = require('helmet');
 const users = require('./routes/users');
 const cards = require('./routes/cards');
 const auth = require('./middlewares/auth');
@@ -17,6 +18,8 @@ const regExp = /^((ftp|http|https):\/\/)?(www\.)?([A-Za-z0-9]{1}[A-Za-z0-9\-]*\.
 const { PORT = 3000 } = process.env;
 
 const app = express();
+
+app.use(helmet());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
