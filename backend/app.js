@@ -1,16 +1,16 @@
 /* eslint-disable no-useless-escape */
 const mongoose = require('mongoose');
-require('dotenv').config(); 
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const { celebrate, Joi, errors } = require('celebrate');
+const cors = require('cors');
 const users = require('./routes/users');
 const cards = require('./routes/cards');
 const auth = require('./middlewares/auth');
 const { createUser, login } = require('./controllers/users');
 const NotFoundError = require('./errors/not-found-err');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors')
 
 const regExp = /^((ftp|http|https):\/\/)?(www\.)?([A-Za-z0-9]{1}[A-Za-z0-9\-]*\.?)*\.{1}[A-Za-z0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\/])*)?/;
 
@@ -25,11 +25,10 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use(requestLogger);
 
-
 app.use(cors({
   origin: 'https://nzhyburtovich.nomoredomains.work',
   credentials: true,
-}))
+}));
 
 app.get('/crash-test', () => {
   setTimeout(() => {

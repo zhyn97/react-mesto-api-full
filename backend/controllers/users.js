@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-require('dotenv').config(); 
+require('dotenv').config();
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -8,6 +8,7 @@ const NotFoundError = require('../errors/not-found-err');
 const BadRequestError = require('../errors/bad-req');
 const BadAuthError = require('../errors/bad-auth');
 const Conflict = require('../errors/conflict');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const getOneUser = (req, res, next) => {
@@ -74,7 +75,11 @@ const login = (req, res, next) => {
       if (!user) {
         throw new BadAuthError('Ошибка авторизации');
       }
-      const token = jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+        { expiresIn: '7d' },
+      );
 
       res.send({ token });
     })
